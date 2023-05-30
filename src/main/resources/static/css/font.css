@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "MainFont";
+    src: url("MainFont.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "MainFont_Bold";
+    src: url("MainFont_Bold.ttf") format("truetype");
+}
+.MainFont {
+    font-family: 'MainFont', serif;
+}
+
+.MainFontBold {
+    font-family: 'MainFont_Bold', serif;
+}

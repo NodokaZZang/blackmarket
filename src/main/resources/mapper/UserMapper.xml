@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dnf.module.blackmarket.repository.UserMapper">
+
+    <select id="getUserInfo" parameterType="String" resultType="dnf.module.blackmarket.dto.UserInfo">
+        select
+            userId
+            ,pw
+            ,roles
+        from
+            userInfo
+        where userId = #{insertedId}
+    </select>
+
+    <insert id="saveAuthKey" parameterType="hashmap">
+        insert into authData (authKey, authNo) values (#{authKey}, #{authNo});
+    </insert>
+</mapper>
